@@ -3,25 +3,14 @@
   <require from="bootswatch/bootstrap.css"></require>
   <require from="font-awesome/css/font-awesome.css"></require>
   <require from="app.css"></require>
-  <!--<div ref="sidebar">
-    <img src="img/admin1.jpg" alt="headshot" class="headshot" style="margin-left:12px" />
-    <span id="username">John Summers</span>
-    <ul class="nav">
-      <li class="active"><a asp-controller="App" asp-action="Index">Home</a></li>
-      <li><a asp-controller="App" asp-action="About">About</a></li>
-      <li><a asp-controller="App" asp-action="Generator">DB Generator</a></li>
-    </ul>
-  </div>-->
-  <side-bar ref="sideBar"></side-bar>
+
+  <side-bar router.bind="router" ref="sideBar"></side-bar>
 
   <div ref="wrapper">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <ul class="nav navbar-nav navbar-left">
           <li>
-            <!--<button ref="sidebarToggle" click.delegate="toggleSidebar()" class="btn btn-primary" style="margin-top:6px; margin-right:10px">
-              <i class="fa fa-angle-left"></i>
-            </button>-->
             <button side-bar-toggle="sidebar-ref.bind: sideBar; wrapper-ref.bind: wrapper;" class="btn btn-primary" style="margin-top:6px; margin-right:10px">
               <i class="fa fa-angle-left"></i>
             </button>
@@ -33,7 +22,7 @@
     </nav>
     <div id="main" class="container-fluid">
       <div>
-        TODO: router view
+        <router-view></router-view>
       </div>
     </div>
     <div id="footer" class="container-fluid">
