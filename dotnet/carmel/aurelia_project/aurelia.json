@@ -145,14 +145,24 @@
             "resources": [
               "bootstrap.css"
             ]
+          },
+          {
+            "name": "font-awesome",
+            "path": "../node_modules/font-awesome",
+            "resources": [
+              "css/font-awesome.css"
+            ]
           }
         ]
       }
     ],
     "copyFiles": {
-      "node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2": "bootstrap/fonts",
-      "node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff": "bootstrap/fonts",
-      "node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf": "bootstrap/fonts"
+      "node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2": "wwwroot/bootstrap/fonts",
+      "node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff": "wwwroot/bootstrap/fonts",
+      "node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf": "wwwroot/bootstrap/fonts",
+      "node_modules/font-awesome/fonts/fontawesome-webfont.woff2": "wwwroot/font-awesome/fonts",
+      "node_modules/font-awesome/fonts/fontawesome-webfont.woff": "wwwroot/font-awesome/fonts",
+      "node_modules/font-awesome/fonts/fontawesome-webfont.ttf": "wwwroot/font-awesome/fonts"
     }
   }
 }

@@ -252,3 +252,5 @@ paket-files/
 *.sln.iml
 dotnet/carmel/bootstrap/
 dotnet/carmel/wwwroot/scripts/
+/dotnet/carmel/wwwroot/bootstrap/fonts
+/dotnet/carmel/wwwroot/font-awesome/fonts
