@@ -2,8 +2,8 @@
   <require from="bootstrap/css/bootstrap.css"></require>
   <require from="bootswatch/bootstrap.css"></require>
   <require from="font-awesome/css/font-awesome.css"></require>
-  <!--<require from="css/site.css"></require>-->
-  <div id="sidebar">
+  <require from="app.css"></require>
+  <div ref="sidebar">
     <img src="img/admin1.jpg" alt="headshot" class="headshot" style="margin-left:12px" />
     <span id="username">John Summers</span>
     <ul class="nav">
@@ -13,12 +13,12 @@
     </ul>
   </div>
 
-  <div id="wrapper">
+  <div ref="wrapper">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <ul class="nav navbar-nav navbar-left">
           <li>
-            <button id="sidebarToggle" class="btn btn-primary" style="margin-top:6px; margin-right:10px">
+            <button ref="sidebarToggle" click.delegate="toggleSidebar()" class="btn btn-primary" style="margin-top:6px; margin-right:10px">
               <i class="fa fa-angle-left"></i>
             </button>
           </li>

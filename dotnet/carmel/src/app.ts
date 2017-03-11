@@ -2,20 +2,22 @@ declare var $: any;
 
 export class App {
   message = 'Hello World!';
+  sidebar: Element;
+  sidebarToggle: HTMLButtonElement;
+  wrapper: Element;
 
-  attached() {
-    var $sidebarAndWrapper = $("#sidebar,#wrapper");
-    var $icon = $("#sidebarToggle i.fa");
+  attached() { }
 
-    $("#sidebarToggle").on("click", function () {
-      $sidebarAndWrapper.toggleClass("hide-sidebar");
-      if ($sidebarAndWrapper.hasClass("hide-sidebar")) {
-        $icon.removeClass("fa-angle-left");
-        $icon.addClass("fa-angle-right");
-      } else {
-        $icon.removeClass("fa-angle-right");
-        $icon.addClass("fa-angle-left");
-      }
-    });
+  toggleSidebar() {
+    const icon = this.sidebarToggle.querySelector('i.fa');
+    this.sidebar.classList.toggle('hide-sidebar');
+    this.wrapper.classList.toggle('hide-sidebar');
+    if (this.sidebar.classList.contains('hide-sidebar')) {
+      icon.classList.remove('fa-angle-left');
+      icon.classList.add('fa-angle-right');
+    } else {
+      icon.classList.remove('fa-angle-right');
+      icon.classList.add('fa-angle-left');
+    }
   }
 }
